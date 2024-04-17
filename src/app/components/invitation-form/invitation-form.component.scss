@@ -1,0 +1,148 @@
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 320px;
+  height: 100%;
+  min-height: 300px;
+  padding: 0 10px;
+  background-image: url("../../../assets/bg-flowers.png");
+  background-size: cover;
+
+  & ::ng-deep {
+    .ant-form-item-label > label {
+      color: white;
+      font-weight: 500;
+    }
+
+    .ant-form-item-explain-error {
+      color: #c10002;
+    }
+
+    .ant-form-vertical .ant-form-item {
+      flex-direction: row;
+    }
+
+    .ant-input:focus, .ant-input-focused {
+      box-shadow: none;
+    }
+
+    .ant-input,
+    input:-internal-autofill-selected,
+    .ant-input-status-error:not(.ant-input-disabled):not(.ant-input-borderless).ant-input,
+    .ant-input-status-error:not(.ant-input-disabled):not(.ant-input-borderless).ant-input:hover {
+      background-color: transparent !important;
+      color: white !important;
+      border-radius: 0;
+      font-weight: 500;
+      border-left: none;
+      border-right: none;
+      border-top: none;
+    }
+
+    .ant-btn {
+      border-right: 10px;
+    }
+
+    .ant-btn.ant-btn-background-ghost[disabled] {
+      color: rgb(255 255 255 / 50%);
+      background: transparent;
+      cursor: not-allowed;
+    }
+  }
+}
+
+img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+::placeholder {
+  color: #ffffff;
+}
+
+.image {
+  display: none;
+}
+
+form {
+  background-color: #9575468f;
+  border-radius: 10px;
+  width: 85%;
+  padding: 0 10px;
+
+  button {
+    width: 100%;
+  }
+}
+
+label, h2, .text {
+  color: white;
+  text-align: center;
+}
+
+.form-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+h2 {
+  margin: 40px 0;
+}
+
+@media screen and (min-width: 300px) and (max-width: 400px) {
+  h2 {
+    line-height: 1;
+    margin: 10px 0 20px;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  :host {
+    padding: 0 40px;
+
+    & ::ng-deep {
+      .ant-btn > span {
+        font-size: 28px;
+      }
+    }
+  }
+
+  p {
+    font-size: 28px;
+  }
+
+  .text {
+    font-size: 18px;
+    font-style: italic;
+  }
+
+  form {
+    padding: 40px 15px;
+  }
+}
+
+@media screen and (min-width: 912px) {
+  :host {
+    padding: 0 60px;
+
+    & ::ng-deep {
+      .ant-input, label {
+        font-size: 22px !important;
+      }
+
+    }
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+
+  form {
+    padding: 40px 30px;
+    width: 80%;
+  }
+}

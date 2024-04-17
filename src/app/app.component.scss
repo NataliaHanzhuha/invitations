@@ -1,0 +1,36 @@
+nz-layout {
+  height: 100vh;
+}
+
+nz-content {
+  //padding: 0 50px;
+  height: 100%;
+  background-color: var(--bg-color);
+}
+
+nz-header {
+  background-color: #bcb8b1;
+  height: 54px;
+}
+
+nz-footer {
+  text-align: center;
+  background-color: #bcb8b1;
+  color: #f4f3ee;
+  padding: 10px 50px;
+}
+@media screen and (min-width: 300px) and (max-width: 400px) {
+  .ant-layout-header {
+    display: none;
+  }
+
+  .ant-layout-footer {
+    padding: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .ant-layout-footer {
+    padding: 10px;
+  }
+}
