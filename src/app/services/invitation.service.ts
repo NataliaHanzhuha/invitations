@@ -7,8 +7,9 @@ import { Guest } from '../components/invitation-form/guest.model';
   providedIn: 'root',
 })
 export class InvitationService {
-  private url: string = 'http://localhost:3001/';
-
+  // private url: string = 'http://localhost:3001/';
+  private url: string = 'https://silly-kleicha-965963.netlify.app';
+  
   constructor(private http: HttpClient) { }
 
   saveGuest(guest: any): Observable<Guest> {
