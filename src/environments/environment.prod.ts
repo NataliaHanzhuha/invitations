@@ -5,7 +5,7 @@
 
 export const environment = {
   production: true,
-  url: 'http://localhost:4200/'
+  url: 'https://invitations-rvpm.netlify.app'
 };
 
 /*
