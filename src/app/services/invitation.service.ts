@@ -8,7 +8,7 @@ import { Guest } from '../components/invitation-form/guest.model';
 })
 export class InvitationService {
   // private url: string = 'http://localhost:3001/';
-  private url: string = 'https://email-server-sigma.vercel.app';
+  private url: string = 'https://email-server-sigma.vercel.app/';
   
   constructor(private http: HttpClient) { }
 
