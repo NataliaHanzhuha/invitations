@@ -2,12 +2,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 320px;
+  min-width: 280px;
   height: 100%;
   min-height: 300px;
   padding: 0 10px;
   background-image: url("../../../assets/bg-flowers.png");
   background-size: cover;
+  background-position: center;
 
   & ::ng-deep {
     .ant-form-item-label > label {
@@ -45,12 +46,6 @@
       border-top: none;
     }
 
-    .ant-btn[disabled] {
-      color: var(--white);
-      background: transparent;
-      cursor: not-allowed;
-    }
-
     .ant-form-item-label > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before {
       color: var(--error);
     }
@@ -64,10 +59,6 @@ img {
 
 ::placeholder {
   color: var(--white);
-}
-
-.image {
-  display: none;
 }
 
 form {
@@ -107,6 +98,8 @@ h2 {
 @media screen and (min-width: 768px) {
   :host {
     padding: 0 40px;
+    max-width: 900px;
+    max-height: 800px;
   }
 
   p {

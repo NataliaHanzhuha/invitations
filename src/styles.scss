@@ -25,3 +25,15 @@
     text-align: center;
   }
 }
+
+.ant-btn[disabled] {
+  color: var(--white);
+  background: transparent;
+  cursor: not-allowed;
+}
+
+.ant-btn {
+  color: var(--white);
+  border: 1px solid var(--white);
+  background: transparent;
+}

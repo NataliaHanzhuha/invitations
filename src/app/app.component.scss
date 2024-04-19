@@ -6,6 +6,9 @@ nz-content {
   //padding: 0 50px;
   height: 100%;
   background-color: var(--bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 nz-header {
