@@ -12,11 +12,11 @@
 
 		<h2>Respond, if you please for {{ client?.name }}'s party</h2>
 
-		<div class="text"
-		     *ngIf="!guestId"
-		     nz-typography>Please, enter your full name and email for the party registration.
-		                   Also you can add names of extra persons.
-		</div>
+<!--		<div class="text"-->
+<!--		     *ngIf="!guestId"-->
+<!--		     nz-typography>Please, enter your full name and email for the party registration.-->
+<!--		                   Also you can add names of extra persons.-->
+<!--		</div>-->
 
 		<nz-form-item>
 			<nz-form-label [nzSm]="6"
@@ -82,7 +82,6 @@
 	           [nzTitle]="title">
 		<ng-template #title>
 			<p nz-typography>Thanks for approving this invitation for {{ client?.name }}'s birthday party !!!
-			                 <!--					<i>{{ client?.date | date : 'fullDate' }}</i>-->
 			</p>
 			<p nz-typography>You got email with all party details</p>
 			{{getLink('invitation')}} {{guest | json}}

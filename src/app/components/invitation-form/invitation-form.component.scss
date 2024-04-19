@@ -11,12 +11,18 @@
 
   & ::ng-deep {
     .ant-form-item-label > label {
-      color: white;
+      color: var(--white);
       font-weight: 500;
     }
 
+    //.ant-form-item-label {
+    //  text-align: center;
+    //}
+
     .ant-form-item-explain-error {
-      color: #c10002;
+      color: var(--error);
+      font-style: italic;
+      font-size: 14px;
     }
 
     .ant-form-vertical .ant-form-item {
@@ -28,11 +34,10 @@
     }
 
     .ant-input,
-    input:-internal-autofill-selected,
     .ant-input-status-error:not(.ant-input-disabled):not(.ant-input-borderless).ant-input,
     .ant-input-status-error:not(.ant-input-disabled):not(.ant-input-borderless).ant-input:hover {
       background-color: transparent !important;
-      color: white !important;
+      color: var(--white) !important;
       border-radius: 0;
       font-weight: 500;
       border-left: none;
@@ -40,14 +45,14 @@
       border-top: none;
     }
 
-    .ant-btn {
-      border-right: 10px;
-    }
-
-    .ant-btn.ant-btn-background-ghost[disabled] {
-      color: rgb(255 255 255 / 50%);
+    .ant-btn[disabled] {
+      color: var(--white);
       background: transparent;
       cursor: not-allowed;
+    }
+
+    .ant-form-item-label > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before {
+      color: var(--error);
     }
   }
 }
@@ -58,7 +63,7 @@ img {
 }
 
 ::placeholder {
-  color: #ffffff;
+  color: var(--white);
 }
 
 .image {
@@ -66,7 +71,7 @@ img {
 }
 
 form {
-  background-color: #9575468f;
+  background-color: rgb(149 117 70 / 89%);
   border-radius: 10px;
   width: 85%;
   padding: 0 10px;
@@ -77,7 +82,7 @@ form {
 }
 
 label, h2, .text {
-  color: white;
+  color: var(--white);
   text-align: center;
 }
 
@@ -102,12 +107,6 @@ h2 {
 @media screen and (min-width: 768px) {
   :host {
     padding: 0 40px;
-
-    & ::ng-deep {
-      .ant-btn > span {
-        font-size: 28px;
-      }
-    }
   }
 
   p {
