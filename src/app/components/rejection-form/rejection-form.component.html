@@ -1,25 +1,36 @@
-<div *ngIf="!guest; else result" class="form">
-	<h2>Rejected Form</h2>
+<div *ngIf="cancel === undefined; else result" class="form">
+	<h2> Cancel Invitation</h2>
+	<p nz-typography>Are you sure you want to cancel your RSVP?</p>
 
-	<button nz-button
-	        (click)="rejectInvitation()">Reject invitation
-	</button>
+	<div>
+		<button nz-button
+		        (click)="rejectInvitation()">Yes
+		</button>
+		<button nz-button
+		        (click)="cancel = false">No
+		</button>
+	</div>
 </div>
 
 <ng-template #result>
-	<nz-result [nzIcon]="image"
-	           [nzTitle]="title">
-		<ng-template #title>
-			<p nz-typography>Thanks for your decision!!</p>
-			<p nz-typography>If you change your mind please use link bellow </p>
-			<a nz-button
-			   nzType="link"
-			   [href]="getLink('invitation')">Invitation Page</a>
-		</ng-template>
+	<div class="result">
+		<p>{{ cancel
+			? 'You Reservation is now canceled.'
+			: 'Thank you for your Confirmation; your Reservation will remain.'}}</p>
+	</div>
+<!--	<nz-result [nzIcon]="image"-->
+<!--	           [nzTitle]="title">-->
+<!--		<ng-template #title>-->
+<!--			<p nz-typography>Thanks for your decision!!</p>-->
+<!--			<p nz-typography>If you change your mind please use link bellow </p>-->
+<!--			<a nz-button-->
+<!--			   nzType="link"-->
+<!--			   [href]="getLink('invitation')">Invitation Page</a>-->
+<!--		</ng-template>-->
 
-		<ng-template #image>
-			<img src="../../../assets/juliet-card.jpeg"
-			     alt="123">
-		</ng-template>
-	</nz-result>
+<!--		<ng-template #image>-->
+<!--			<img src="../../../assets/juliet-card.jpeg"-->
+<!--			     alt="123">-->
+<!--		</ng-template>-->
+<!--	</nz-result>-->
 </ng-template>

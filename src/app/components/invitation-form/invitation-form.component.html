@@ -10,13 +10,7 @@
 	      [formGroup]="validateForm"
 	      (ngSubmit)="submitForm()">
 
-		<h2>Respond, if you please for {{ client?.name }}'s party</h2>
-
-<!--		<div class="text"-->
-<!--		     *ngIf="!guestId"-->
-<!--		     nz-typography>Please, enter your full name and email for the party registration.-->
-<!--		                   Also you can add names of extra persons.-->
-<!--		</div>-->
+		<h2>You are cordially Invited to {{ client?.name }}'s 50th birthday party (28.09.2024)</h2>
 
 		<nz-form-item>
 			<nz-form-label [nzSm]="6"
@@ -26,7 +20,7 @@
 			</nz-form-label>
 			<nz-form-control [nzSm]="18"
 			                 [nzXs]="24"
-			                 nzErrorTip="Please input your full name!">
+			                 nzErrorTip="Please input your full name">
 				<input formControlName="name"
 				       type="text"
 				       id="name"
@@ -42,7 +36,7 @@
 			</nz-form-label>
 			<nz-form-control [nzSm]="18"
 			                 [nzXs]="24"
-			                 nzErrorTip="Please input your email!">
+			                 nzErrorTip="Please input your email">
 				<input formControlName="email"
 				       nz-input
 				       id="email"
@@ -53,7 +47,7 @@
 		<nz-form-item>
 			<nz-form-label [nzSm]="6"
 			               [nzXs]="24"
-			               nzFor="extraPerson1">Extra Person Name (1)
+			               nzFor="extraPerson1">Name of your additional Guest
 			</nz-form-label>
 			<nz-form-control [nzSm]="18"
 			                 [nzXs]="24">
@@ -70,7 +64,7 @@
 				        nzSize="large"
 				        nzType="default"
 				        [disabled]="!validateForm.valid">
-					{{ guestId ? 'Update your Info' : 'Join to Party' }}
+					{{ guestId ? 'Update' : 'RSVP' }}
 				</button>
 			</nz-form-control>
 		</nz-form-item>
@@ -78,27 +72,14 @@
 </ng-template>
 
 <ng-template #result>
-	<nz-result [nzIcon]="image"
-	           [nzTitle]="title">
-		<ng-template #title>
-			<p nz-typography>Thanks for approving this invitation for {{ client?.name }}'s birthday party !!!
-			</p>
-			<p nz-typography>You got email with all party details</p>
-			{{getLink('invitation')}} {{guest | json}}
-			<nz-button-group>
-				<a nz-button
-				   nzType="link"
-				   [href]="getLink('invitation')">Edit data</a>
-				<a nz-button
-				   nzType="link"
-				   [href]="getLink('rejection')">Reject invitation</a>
-			</nz-button-group>
-		</ng-template>
+	<div class="result">
+		<h2>Thank you for your RSVP; see events details below:</h2>
+		<p><strong>Address:</strong> Scarpetta at Riviera Hotel, 3525 26th  Street NE, T1Y7E3</p>
+		<p class="dress-code"><strong>Dress code: </strong>Red carpet worthy.</p>
+		<p class="details"><strong>Ladies: </strong>Evening gown.</p>
+		<p class="details"><strong>Men: </strong>Black suit.</p>
 
-		<ng-template #image>
-			<img src="../../../assets/juliet-card.jpeg"
-			     alt="123">
-		</ng-template>
-	</nz-result>
+		<div nz-typography>More details have been sent to your email provided</div>
+	</div>
 </ng-template>
 

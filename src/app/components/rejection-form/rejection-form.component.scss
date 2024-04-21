@@ -8,20 +8,28 @@
   min-height: 300px;
   padding: 0 10px;
   min-width: 280px;
-  background-image: url("../../../assets/bg-flowers.png");
+  background-image: url("../../../assets/mobile-bg.png");
   background-size: cover;
   background-position: center;
   background-color: black;
 }
 
-.form {
+.form, .result {
   padding: 20px 40px;
-  background-color: rgb(149 117 70 / 89%);
-  border: 1px solid;
+  background-color: rgb(255 255 255 / 50%);
+  width: 85%;
   border-radius: 10px;
   display: flex;
   align-items: center;
   flex-direction: column;
+  text-align: center;
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 15px;
+  }
 }
 
 h2 {

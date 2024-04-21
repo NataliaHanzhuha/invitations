@@ -6,7 +6,7 @@
   height: 100%;
   min-height: 300px;
   padding: 0 10px;
-  background-image: url("../../../assets/bg-flowers.png");
+  background-image: url("../../../assets/mobile-bg.png");
   background-size: cover;
   background-position: center;
 
@@ -30,6 +30,10 @@
       flex-direction: row;
     }
 
+    .ant-form-item-control-input-content {
+      text-align: center;
+    }
+
     .ant-input:focus, .ant-input-focused {
       box-shadow: none;
     }
@@ -39,11 +43,11 @@
     .ant-input-status-error:not(.ant-input-disabled):not(.ant-input-borderless).ant-input:hover {
       background-color: transparent !important;
       color: var(--white) !important;
-      border-radius: 0;
+      border-radius: 20px;
       font-weight: 500;
-      border-left: none;
-      border-right: none;
-      border-top: none;
+      //border-left: none;
+      //border-right: none;
+      //border-top: none;
     }
 
     .ant-form-item-label > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before {
@@ -61,15 +65,34 @@ img {
   color: var(--white);
 }
 
-form {
-  background-color: rgb(149 117 70 / 89%);
+form, .result {
+  background-color: rgb(255 255 255 / 50%);
   border-radius: 10px;
   width: 85%;
   padding: 0 10px;
+  margin-top: 60px;
 
-  button {
-    width: 100%;
+  div {
+    margin-top: 20px;
+    font-size: 15px;
+    text-align: center;
   }
+
+  //button {
+  //  width: 80%;
+  //  margin-top: 30px;
+  //  background: #bba377;
+  //  border-radius: 17px;
+  //}
+}
+
+.details {
+  padding-left: 30px;
+  margin: 0;
+}
+
+.dress-code {
+  margin: 0;
 }
 
 label, h2, .text {
@@ -85,12 +108,13 @@ label, h2, .text {
 
 h2 {
   margin: 40px 0;
+  font-size: 22px;
 }
 
 @media screen and (min-width: 300px) and (max-width: 400px) {
   h2 {
     line-height: 1;
-    margin: 10px 0 20px;
+    margin: 10px 0 30px;
   }
 }
 

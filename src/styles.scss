@@ -2,38 +2,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 :root {
   --bg-color: #f4f3ee;
-  --white: #fff;
+  --white: #000;
   --error:  #ffb6b7;
 }
 
-* {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-}
-
-.ant-result {
-  padding: 48px 32px;
-  background: #000000db;
-  border-radius: 10px;
-  max-width: 90vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  p {
-    color: white;
-    text-align: center;
-  }
-}
-
 .ant-btn[disabled] {
-  color: var(--white);
-  background: transparent;
-  cursor: not-allowed;
+  width: 80%;
+  margin-top: 30px;
+  background: #7b7777;
+  border-radius: 17px;
+  border: none;
+  color: #ababab;
 }
 
 .ant-btn {
   color: var(--white);
   border: 1px solid var(--white);
-  background: transparent;
+  width: 80%;
+  margin-top: 30px;
+  background: #bba377;
+  border-radius: 17px;
 }

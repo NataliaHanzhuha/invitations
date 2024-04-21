@@ -16,6 +16,8 @@ import { environment } from '../../../environments/environment';
 export class RejectionFormComponent {
   guestId: string;
   guest: Guest | null | undefined = undefined;
+  cancel: boolean | undefined = undefined;
+
   private readonly clientId: string;
   readonly appLink = environment?.url;
 
@@ -37,6 +39,7 @@ export class RejectionFormComponent {
       .pipe(take(1))
       .subscribe((res) => {
         this.guest = res;
+        this.cancel = true;
       })
   }
 

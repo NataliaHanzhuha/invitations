@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'rejection/:clientId/:guestId',
+    path: 'cancel/:clientId/:guestId',
     loadComponent: () => import('./components/rejection-form/rejection-form.component')
       .then(c => c.RejectionFormComponent)
   },
